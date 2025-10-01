@@ -12,20 +12,26 @@ class MainView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Scaffold(
+    // Estructura base de la pantalla con barra superior y contenido
     appBar: AppBar(
+      // Barra superior con el título de la pantalla
       title: const Text('Pantalla Principal'),
       backgroundColor: Colors.teal,
     ),
     body: Center(
+      // Centra el contenido en el eje principal
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
+        // Organiza los widgets en columna (de arriba a abajo)
         children: [
+          // Detecta el toque en el contenedor para navegar a la segunda pantalla
           GestureDetector(
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute(builder: (_) => const ListViewScreen()),
-            ),
+            ), // Navega a ListViewScreen
             child: Container(
+              // Caja estilizada que muestra el mensaje de bienvenida
               padding: const EdgeInsets.all(16),
               margin: const EdgeInsets.all(16),
               decoration: BoxDecoration(
@@ -39,7 +45,9 @@ class MainView extends StatelessWidget {
               ),
             ),
           ),
+          // Separador para dejar espacio entre elementos
           const SizedBox(height: 60),
+          // Botón que también navega a la segunda pantalla
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: const Color.fromARGB(255, 0, 65, 150),
@@ -51,7 +59,7 @@ class MainView extends StatelessWidget {
             onPressed: () => Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => const ListViewScreen()),
-            ),
+            ), // Navega a ListViewScreen al pulsar el botón
             child: const Text(
               'Ir a Segunda Pantalla',
               style: TextStyle(color: Colors.white, fontSize: 16),
