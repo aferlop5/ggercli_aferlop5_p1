@@ -1,15 +1,30 @@
+// Importa el framework de Flutter y los widgets de Material Design.
 import 'package:flutter/material.dart';
+// Importa la vista principal definida en main_view.dart.
 import 'views/main_view.dart';
 
-void main() => runApp(const MyApp());
+// Función principal: punto de entrada de la aplicación.
+// runApp monta el widget raíz MyApp en la pantalla.
+void main() {
+  runApp(const MyApp());
+}
 
+// MyApp es el widget raíz de la aplicación.
+// Define el tema y el widget inicial.
 class MyApp extends StatelessWidget {
+  // Constructor de MyApp. Key permite identificar el widget de manera única.
   const MyApp({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) => const MaterialApp(
-    title: 'P1 IPC',
-    debugShowCheckedModeBanner: false,
-    home: MainView(), // Widget principal de main_view.dart
-  );
+  Widget build(BuildContext context) {
+    // Retorna un MaterialApp que configura el tema y ruta inicial.
+    return const MaterialApp(
+      // Título de la aplicación, aparece en el interruptor de tareas.
+      title: 'P1 IPC',
+      // Oculta la etiqueta de depuración en modo debug.
+      debugShowCheckedModeBanner: false,
+      // Establece MainView como la pantalla inicial.
+      home: MainView(),
+    );
+  }
 }
