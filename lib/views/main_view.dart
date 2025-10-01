@@ -20,17 +20,23 @@ class MainView extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(
-            padding: const EdgeInsets.all(16),
-            margin: const EdgeInsets.all(16),
-            decoration: BoxDecoration(
-              color: Colors.teal[100],
-              borderRadius: BorderRadius.circular(12),
+          GestureDetector(
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const ListViewScreen()),
             ),
-            child: const Text(
-              '¡Bienvenido a la App!',
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 20),
+            child: Container(
+              padding: const EdgeInsets.all(16),
+              margin: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: Colors.teal[100],
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: const Text(
+                '¡Bienvenido a la App!',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 20),
+              ),
             ),
           ),
           const SizedBox(height: 60),
