@@ -16,15 +16,9 @@ class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    // Retorna un MaterialApp que configura el tema y ruta inicial.
-    return const MaterialApp(
-      // Título de la aplicación, aparece en el interruptor de tareas.
-      title: 'P1 IPC',
-      // Oculta la etiqueta de depuración en modo debug.
-      debugShowCheckedModeBanner: false,
-      // Establece MainView como la pantalla inicial.
-      home: MainView(),
-    );
-  }
+  Widget build(BuildContext context) => const MaterialApp(
+    title: 'P1 IPC', // Título en el interruptor de tareas
+    debugShowCheckedModeBanner: false, // Oculta la etiqueta de depuración
+    home: MainView(), // Pantalla inicial
+  );
 }
